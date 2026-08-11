@@ -1,0 +1,33 @@
+name: Hardware compatibility report
+description: Share a tested modem result
+title: "[Hardware]: "
+labels: [hardware]
+body:
+  - type: input
+    id: modem
+    attributes:
+      label: Manufacturer and model
+      placeholder: Sierra Wireless EM7430
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware and Windows driver
+    validations:
+      required: true
+  - type: checkboxes
+    id: capabilities
+    attributes:
+      label: Tested capabilities
+      options:
+        - label: Device discovery
+        - label: SIM and network status
+        - label: SMS
+        - label: Voice call
+        - label: USSD
+        - label: eSIM
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes and sanitized logs

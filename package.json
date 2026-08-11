@@ -1,0 +1,73 @@
+{
+  "name": "volink-desktop",
+  "version": "1.0.0",
+  "description": "Windows desktop modem and telephony management center inspired by VoHive workflows",
+  "main": "dist-electron/main.js",
+  "author": "VoLink",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron .\"",
+    "build": "tsc -b && vite build && esbuild src/main/main.ts --bundle --platform=node --format=esm --external:electron --external:serialport --external:@serialport/* --external:nodemailer --outfile=dist-electron/main.js && esbuild src/main/preload.ts --bundle --platform=node --format=cjs --external:electron --outfile=dist-electron/preload.cjs",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --pretty false",
+    "dist": "npm run build && electron-builder --win portable"
+  },
+  "dependencies": {
+    "nodemailer": "^9.0.5",
+    "serialport": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/nodemailer": "^8.0.1",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "latest",
+    "electron": "latest",
+    "electron-builder": "latest",
+    "esbuild": "latest",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "wait-on": "latest"
+  },
+  "build": {
+    "appId": "com.volink.desktop",
+    "productName": "VoLink",
+    "asar": true,
+    "compression": "store",
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release",
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "signExecutable": false,
+      "signAndEditExecutable": false
+    },
+    "portable": {
+      "artifactName": "VoLink-${version}-portable.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "artifactName": "VoLink-${version}-setup.exe"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+dist-electron/
+release/
+release-*/
+tmp/
+*.tsbuildinfo
+assets/dashboard-concept.png
+
+# Logs and local runtime data
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+volink-data.json
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
