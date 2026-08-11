@@ -6,6 +6,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/w330590751/VoLink/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/w330590751/VoLink/ci.yml?branch=main&style=flat-square&label=build"></a>
   <a href="https://github.com/w330590751/VoLink/releases/latest"><img alt="Download" src="https://img.shields.io/github/v/release/w330590751/VoLink?style=flat-square&label=download"></a>
   <a href="https://github.com/w330590751/VoLink/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-5b57dc?style=flat-square"></a>
   <img alt="Windows" src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=flat-square&logo=windows11">
